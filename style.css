@@ -1,0 +1,111 @@
+/* Define o estilo do corpo da página */
+body{
+    background-color: #ff0000;
+    margin: 0;
+}
+
+/* Container principal usando grid layout */
+.container {
+   display: grid; 
+   gap: 10px;
+   grid-template-columns: repeat(12, 1fr);
+}
+
+/* Estilo para cabeçalho e rodapé */
+header, footer{
+    grid-column: 1 / -1;
+    background-color: #fff;
+    border-radius: 15px;
+    color: #000;
+    font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+    height: 80px;
+}
+
+/* Estilo específico para o rodapé */
+footer {
+    height: 40px;
+}
+
+/* Estilo para a barra lateral de navegação */
+.sidebar{
+    grid-column: 1 / 4;
+    border: 1px solid  #000;
+    background-color: #ffff;
+    border-radius: 15px;
+    gap: 20px;
+    text-align: justify;
+    color: #000;
+    font-size: large;
+    font-family: sans-serif;
+    margin-top: 10px;
+}
+
+/* Estilo para a imagem inserida na página */
+.imgavenger{
+    grid-column: 2 / 3;
+    margin: 30px;
+    padding: 5px;
+    display: block;
+    max-width: 100%;
+}
+
+/* Estilo para listas não ordenadas */
+ul{
+    list-style-type: none;
+    color: #000;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Estilo para itens de lista */
+li {
+    margin: 0px 0; /* Aumenta o espaço vertical entre os itens da lista */
+    font-size: 20px; /* Aumenta o tamanho da fonte dos itens da lista */
+}  
+
+/* Estilo para links */
+a,
+  a:link {
+    border: solid #000 1px;
+    color: #000;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+}
+
+/* Estilo para o estado hover dos links, conforme passa o mouse sobre os links, aplica-se */
+a:hover {
+    background-color: #555;
+    color: white;
+  }
+
+/* media query para dispositivos móveis (responsividade) */
+@media only screen and (max-width: 767px) {
+    .sidebar {
+        grid-column: 1 / -1; /* Ocupa todas as colunas do grid em telas pequenas */
+    }
+    
+    .imgvictor{
+        width: 100%; /* Ajusta a largura da imagem para 100% */
+    }
+}
+
+/* Estilo para a seção principal de conteúdo */
+.principal{
+    grid-column: 4 / -1;
+    height: 600px;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: justify;
+    color: #000;
+    font-size: large;
+    font-family: sans-serif;
+    margin: 10px;
+}
